@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog_radius_popup"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/text_exchange_rate"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_14"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/custom_exchange_rate_dialog_cancel_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_cancel" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_boarder">
+
+                <EditText
+                    android:id="@+id/custom_exchange_rate_dialog_amount_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="14dp"
+                    android:hint="@string/text_hint_input_exchange_rate"
+                    android:textColorHint="@color/text_color_bebebe"
+                    android:textSize="@dimen/size_12" />
+
+            </LinearLayout>
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/custom_exchange_rate_dialog_amount_currency_spinner"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_code_phone_number_2"
+                android:gravity="center_vertical"
+                android:hint="@string/text_select"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/text_color_222222"
+                android:textColorHint="@color/text_color_bebebe"
+                android:textSize="@dimen/size_12"
+                app:spinner_arrow_drawable="@drawable/icon_arrow"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_item_height="42dp"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+                app:spinner_popup_elevation="14dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="="
+                android:textColor="@color/text_color_222222" />
+
+            <ImageView
+                android:id="@+id/custom_exchange_rate_dialog_swap_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_swap_vert_24" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_boarder">
+
+                <TextView
+                    android:id="@+id/custom_exchange_rate_dialog_change_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:background="@null"
+                    android:paddingStart="14dp"
+                    android:text="0"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_12" />
+
+            </LinearLayout>
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/custom_exchange_rate_dialog_change_currency_spinner"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_code_phone_number_2"
+                android:gravity="center_vertical"
+                android:hint="@string/text_select"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/text_color_222222"
+                android:textColorHint="@color/text_color_bebebe"
+                android:textSize="@dimen/size_12"
+                app:spinner_arrow_drawable="@drawable/icon_arrow"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_item_height="42dp"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+                app:spinner_popup_elevation="14dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/bg_boarder_half_button"
+            android:text="@string/text_message_exchange_rate"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/size_12"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

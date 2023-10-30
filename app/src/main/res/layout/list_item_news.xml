@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+            android:id="@+id/list_item_news_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/bg_color_0D000000" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/list_item_news_image_view"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="16dp"
+                app:roundedCornerRadius="10dp"
+                app:actualImageScaleType="fitXY"
+                app:placeholderImage="@drawable/bg_default"
+                fresco:placeholderImage="@drawable/bg_default"
+                fresco:failureImage="@drawable/bg_default"
+                app:failureImageScaleType="fitXY"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="13dp"
+                android:orientation="vertical" >
+
+            <TextView
+                    android:id="@+id/list_item_news_title_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="기사제목"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/list_item_news_content_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:maxLines="2"
+                    android:text="기사내용 기사내용 기사내용 기사내용 기사내용 기사내용 기사내용 기사내용 기사내용 기사내용 기사내용 기사내용 "
+                    android:textColor="@color/text_color_626262"
+                    android:textSize="@dimen/size_14" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_view_count"
+                            android:textColor="@color/text_color_9f9f9f"
+                            android:textSize="@dimen/size_12" />
+
+                    <TextView
+                            android:id="@+id/list_item_news_view_count_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="100"
+                            android:textColor="@color/text_color_9f9f9f"
+                            android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_reply"/>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:text="@string/text_comment"
+                            android:textColor="@color/text_color_9f9f9f"
+                            android:textSize="@dimen/size_12" />
+
+                    <TextView
+                            android:id="@+id/list_item_news_comment_count_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="100"
+                            android:textColor="@color/text_color_9f9f9f"
+                            android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/bg_color_0D000000" />
+
+</LinearLayout>

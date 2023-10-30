@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:orientation="vertical">
+
+        <ImageView
+                android:id="@+id/custom_event_dialog_close_image_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:padding="10dp"
+                android:src="@drawable/icon_cancel"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/custom_event_dialog_image_view"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:roundedCornerRadius="10dp"
+                app:actualImageScaleType="fitXY"
+                fresco:placeholderImage="@color/bg_color_a8a8a9"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:visibility="visible">
+
+            <ImageView
+                    android:id="@+id/custom_event_dialog_check_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_check_box_outline_blank_24_white"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/text_do_not_watch_again"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/custom_event_dialog_confirm_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/bg_dialog_radius_popup_10dp"
+                android:text="@string/text_confirm"
+                android:textSize="@dimen/size_14"
+                android:textColor="@color/text_color_222222"
+                android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>

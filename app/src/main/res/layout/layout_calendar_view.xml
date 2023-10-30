@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical">
+
+    <com.events.calendar.views.EventsCalendar
+        android:id="@+id/layout_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never"
+        app:datesTextSize="14sp"
+        app:eventDotColor="@color/text_color_e94335"
+        app:isBoldTextOnSelectionEnabled="true"
+        app:monthTitleColor="@color/text_color_000000"
+        app:monthTitleTextSize="@dimen/size_14"
+        app:primaryTextColor="@color/text_color_000000"
+        app:secondaryTextColor="@color/bg_color_e5e5e5"
+        app:selectedTextColor="@color/text_color_ffffff"
+        app:selectionColor="@color/bg_color_0d4d97"
+        app:weekHeaderColor="@color/text_color_000000"
+        app:weekHeaderTextSize="13sp" />
+
+</LinearLayout>

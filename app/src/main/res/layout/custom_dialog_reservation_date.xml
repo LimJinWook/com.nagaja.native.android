@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/test"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/bg_boarder_half"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="@string/text_select_reservation_date"
+                android:textColor="@color/text_color_000000"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/custom_dialog_reservation_date_cancel_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:padding="5dp"
+                android:src="@drawable/icon_cancel" />
+
+        </LinearLayout>
+
+        <!--<com.events.calendar.views.EventsCalendar
+            android:id="@+id/custom_dialog_reservation_date_calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:datesTextSize="16sp"
+            app:eventDotColor="@color/text_color_e94335"
+            app:isBoldTextOnSelectionEnabled="true"
+            app:monthTitleColor="@color/text_color_000000"
+            app:monthTitleTextSize="@dimen/size_16"
+            app:primaryTextColor="@color/text_color_000000"
+            app:secondaryTextColor="@color/text_color_000000"
+            app:selectedTextColor="@color/text_color_ffffff"
+            app:selectionColor="@color/text_color_000000"
+            app:weekHeaderColor="@color/text_color_000000"
+            app:rangeSelectionColor="@color/bg_color_0d4d97"
+            app:rangeSelectionStartColor="@color/bg_color_0d4d97"
+            app:rangeSelectionEndColor="@color/bg_color_0d4d97"
+            app:weekHeaderTextSize="16sp" />-->
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.events.calendar.views.EventsCalendar
+                    android:id="@+id/custom_dialog_reservation_date_calendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:overScrollMode="never"
+                    app:datesTextSize="14sp"
+                    app:eventDotColor="@color/text_color_e94335"
+                    app:isBoldTextOnSelectionEnabled="true"
+                    app:monthTitleColor="@color/text_color_000000"
+                    app:monthTitleTextSize="@dimen/size_14"
+                    app:primaryTextColor="@color/text_color_000000"
+                    app:secondaryTextColor="@color/bg_color_e5e5e5"
+                    app:selectedTextColor="@color/text_color_ffffff"
+                    app:selectionColor="@color/bg_color_0d4d97"
+                    app:rangeSelectionColor="@color/bg_color_0d4d97"
+                    app:rangeSelectionStartColor="@color/bg_color_0d4d97"
+                    app:rangeSelectionEndColor="@color/bg_color_0d4d97"
+                    app:weekHeaderColor="@color/text_color_000000"
+                    app:weekHeaderTextSize="13sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/custom_dialog_reservation_date_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color_ffffff" >
+
+        <TextView
+            android:id="@+id/custom_dialog_reservation_date_register_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:background="@drawable/bg_button_radius_blue"
+            android:text="@string/text_register"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/size_14"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

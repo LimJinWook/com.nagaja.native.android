@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:fresco="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color_ffffff"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:background="@drawable/bg_boarder">
+
+        <TextView
+                android:id="@+id/list_item_key_word_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="키워드"
+                android:textColor="@color/text_color_626262"
+                android:textSize="@dimen/size_14" />
+
+        <ImageView
+                android:id="@+id/list_item_key_word_delete_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/icon_cancel" />
+
+    </LinearLayout>
+
+</LinearLayout>

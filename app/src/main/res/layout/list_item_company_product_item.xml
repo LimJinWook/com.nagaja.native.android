@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/list_item_company_product_item_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/list_item_company_product_item_image_view"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            app:roundedCornerRadius="10dp"
+            app:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/bg_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/list_item_company_product_item_name_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="7dp"
+                    android:maxLines="2"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/list_item_company_product_item_modify_text_view"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_boarder_black"
+                        android:gravity="center"
+                        android:text="@string/text_modify"
+                        android:textColor="@color/text_color_000000"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/list_item_company_product_item_delete_text_view"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_boarder_black"
+                        android:gravity="center"
+                        android:text="@string/text_delete"
+                        android:textColor="@color/text_color_000000"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_price"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:text=":"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/list_item_company_product_item_price_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14" />
+
+            </LinearLayout>-->
+
+            <TextView
+                android:id="@+id/list_item_company_product_item_content_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_color_9f9f9f"
+                android:textSize="@dimen/size_14" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_item_company_product_item_currency_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never" />
+
+</LinearLayout>

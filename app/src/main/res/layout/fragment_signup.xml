@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical"
+    tools:context=".Login.LoginActivity">
+
+    <include
+        layout="@layout/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragment_signup_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/text_sign_up"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/text_input_member_information"
+                android:textColor="@color/text_color_9f9f9f"
+                android:textSize="@dimen/size_16" />
+
+            <!-- Name Input View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_name"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_boarder"
+                    android:gravity="center_vertical">
+
+                    <!-- Name Edit Text -->
+                    <EditText
+                        android:id="@+id/fragment_signup_name_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:hint="@string/text_hint_input_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color_222222"
+                        android:textColorHint="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <!-- Name Error Text View -->
+                <TextView
+                    android:id="@+id/fragment_signup_name_error_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/text_error_input_name"
+                    android:textColor="@color/text_color_ff1e54"
+                    android:textSize="@dimen/size_12"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <!-- Email Input View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_email"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_boarder"
+                        android:gravity="center_vertical">
+
+                        <!-- Email Edit Text -->
+                        <EditText
+                            android:id="@+id/fragment_signup_email_edit_text"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@null"
+                            android:hint="@string/text_hint_input_email"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                        <ImageView
+                            android:id="@+id/fragment_signup_sns_image_view"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="8dp"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/fragment_signup_email_duplicate_check_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/bg_boarder_blue_blue">
+
+                        <TextView
+                            android:id="@+id/fragment_signup_email_duplicate_check_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="@string/text_duplicate_check"
+                            android:textColor="@color/text_color_ffffff" />
+
+                        <ImageView
+                            android:id="@+id/fragment_signup_email_duplicate_check_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/icon_success_check"
+                            android:visibility="gone"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!-- Email Error Text View -->
+                <TextView
+                    android:id="@+id/fragment_signup_email_error_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/text_color_ff1e54"
+                    android:textSize="@dimen/size_12"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_signup_password_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Password Input View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_password"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/text_input_password_message"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_boarder"
+                        android:gravity="center_vertical">
+
+                        <!-- Password  Edit Text -->
+                        <EditText
+                            android:id="@+id/fragment_signup_password_edit_text"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@null"
+                            android:hint="@string/text_hint_input_password"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                        <ImageView
+                            android:id="@+id/fragment_signup_password_show_and_hide_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_password_hide"
+                            android:layout_marginEnd="8dp" />
+
+                    </LinearLayout>
+
+                    <!-- Password Error Text View -->
+                    <TextView
+                        android:id="@+id/fragment_signup_password_error_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/text_hint_password_confirm_message"
+                        android:textColor="@color/text_color_ff1e54"
+                        android:textSize="@dimen/size_12"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <!-- Password Confirm Input View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_confirm_password"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_boarder"
+                        android:gravity="center_vertical">
+
+                        <!-- Password  Edit Text -->
+                        <EditText
+                            android:id="@+id/fragment_signup_password_confirm_edit_text"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@null"
+                            android:hint="@string/text_hint_password_confirm_message"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                        <ImageView
+                            android:id="@+id/fragment_signup_password_confirm_show_and_hide_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_password_hide"
+                            android:layout_marginEnd="8dp" />
+
+                    </LinearLayout>
+
+                    <!-- Password Confirm Error Text View -->
+                    <TextView
+                        android:id="@+id/fragment_signup_password_confirm_error_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/text_error_not_match_password"
+                        android:textColor="@color/text_color_ff1e54"
+                        android:textSize="@dimen/size_12"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Nick Name Input View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_nick_name"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/text_input_nick_name_message"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_boarder"
+                        android:gravity="center_vertical">
+
+                        <!-- Nick Name Edit Text -->
+                        <EditText
+                            android:id="@+id/fragment_signup_nick_name_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@null"
+                            android:hint="@string/text_hint_nick_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/fragment_signup_nick_name_duplicate_check_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/bg_boarder_blue_blue">
+
+                        <TextView
+                            android:id="@+id/fragment_signup_nick_name_duplicate_check_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="@string/text_duplicate_check"
+                            android:textColor="@color/text_color_ffffff" />
+
+                        <ImageView
+                            android:id="@+id/fragment_signup_nick_name_duplicate_check_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/icon_success_check"
+                            android:visibility="gone"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!-- Nick Name Error Text View -->
+                <TextView
+                    android:id="@+id/fragment_signup_nick_name_error_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/text_error_registered_nick_name"
+                    android:textColor="@color/text_color_ff1e54"
+                    android:textSize="@dimen/size_12"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <!-- Phone Number Input View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_phone_number"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/fragment_signup_auth_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_button_radius_blue"
+                    android:gravity="center"
+                    android:text="@string/text_auth"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="@dimen/size_16" />
+
+            </LinearLayout>
+
+            <!-- Address Input View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_address"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14" />
+
+                <!-- Select Nation Spinner -->
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/fragment_signup_select_nation_spinner"
+                    android:layout_width="150dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_boarder"
+                    android:gravity="center"
+                    android:hint="@string/text_select_nation"
+                    android:padding="10dp"
+                    android:textColor="@color/text_color_222222"
+                    android:textColorHint="@color/text_color_222222"
+                    android:textSize="@dimen/size_14"
+                    app:spinner_arrow_animate="true"
+                    app:spinner_arrow_drawable="@drawable/icon_arrow"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_arrow_show="true"
+                    app:spinner_item_height="46dp"
+                    app:spinner_popup_animation="dropdown"
+                    app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+                    app:spinner_popup_elevation="14dp" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_signup_postal_code_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+                    <!-- Postal Code Text View -->
+                    <TextView
+                        android:id="@+id/fragment_signup_postal_code_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edit_box"
+                        android:gravity="center_vertical"
+                        android:hint="@string/text_postal_code"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:textColor="@color/text_color_222222"
+                        android:textColorHint="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_14" />
+
+                    <!-- Search Text View -->
+                    <TextView
+                        android:id="@+id/fragment_sign_up_post_code_search_text_view"
+                        android:layout_width="72dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="7dp"
+                        android:background="@drawable/bg_button_radius_f0f0f0"
+                        android:gravity="center"
+                        android:text="@string/text_search"
+                        android:textColor="@color/text_color_9d9d9d"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <!-- Address View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_boarder"
+                    android:gravity="center_vertical">
+
+                    <!-- Address Edit Text -->
+                    <!--<EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:imeOptions="actionNext"
+                            android:hint="@string/text_hint_input_address"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_14"/>-->
+
+                    <TextView
+                        android:id="@+id/fragment_signup_address_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/text_hint_input_address"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color_222222"
+                        android:textColorHint="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- Address Detail View -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_boarder"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!-- Address Detail Edit Text -->
+                        <EditText
+                            android:id="@+id/fragment_signup_address_detail_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@null"
+                            android:hint="@string/text_hint_input_address_detail"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/fragment_signup_address_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/icon_location_black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Recommender Input View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_recommender"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_boarder"
+                    android:gravity="center_vertical">
+
+                    <!-- Recommender Edit Text -->
+                    <EditText
+                        android:id="@+id/fragment_signup_referral_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:hint="@string/text_hint_input_recommender_id"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color_222222"
+                        android:textColorHint="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Term And Policy View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_message_term_and_policy"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16" />
+
+                <!-- All Consent View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/fragment_signup_all_agree_check_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_check_box_outline_blank_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/text_all_consent"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/bg_color_e1e1e1" />
+
+                <!-- Terms Agree Expandable Layout View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/fragment_signup_terms_agree_check_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_check_box_outline_blank_24" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/text_terms_agree"
+                            android:textColor="@color/text_color_424242"
+                            android:textSize="@dimen/size_14" />
+
+                        <TextView
+                            android:id="@+id/fragment_signup_terms_show_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="2dp"
+                            android:text="@string/text_show"
+                            android:textColor="@color/text_color_424242"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Policy Agree Expandable Layout View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/fragment_signup_policy_agree_check_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_check_box_outline_blank_24" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/text_terms_agree_2"
+                            android:textColor="@color/text_color_424242"
+                            android:textSize="@dimen/size_14" />
+
+                        <TextView
+                            android:id="@+id/fragment_signup_policy_show_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="2dp"
+                            android:text="@string/text_show"
+                            android:textColor="@color/text_color_424242"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Third Party Agree Expandable Layout View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/fragment_signup_third_party_agree_check_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_check_box_outline_blank_24" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/text_terms_agree_3"
+                            android:textColor="@color/text_color_424242"
+                            android:textSize="@dimen/size_14" />
+
+                        <TextView
+                            android:id="@+id/fragment_signup_third_party_show_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="2dp"
+                            android:text="@string/text_show"
+                            android:textColor="@color/text_color_424242"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Location Information Agree Expandable Layout View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/fragment_signup_location_information_agree_check_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_check_box_outline_blank_24" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/text_terms_agree_4"
+                            android:textColor="@color/text_color_424242"
+                            android:textSize="@dimen/size_14" />
+
+                        <TextView
+                            android:id="@+id/fragment_signup_location_information_show_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="2dp"
+                            android:text="@string/text_show"
+                            android:textColor="@color/text_color_424242"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Event Notification Agree View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/fragment_signup_event_check_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_check_box_outline_blank_24" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/text_terms_agree_5"
+                        android:textColor="@color/text_color_424242"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <!-- Service Notification Agree View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/fragment_signup_service_check_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_check_box_outline_blank_24" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/text_terms_agree_6"
+                        android:textColor="@color/text_color_424242"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Success Sign Up Text View -->
+    <TextView
+        android:id="@+id/fragment_signup_success_sign_up_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/bg_color_0d4d97"
+        android:gravity="center"
+        android:text="@string/text_success_sign_up"
+        android:textColor="@color/text_color_ffffff"
+        android:textSize="@dimen/size_18" />
+
+</LinearLayout>

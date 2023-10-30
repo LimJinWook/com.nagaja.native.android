@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="13dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/list_item_break_time_start_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.2"
+                android:text="01:00"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:text="~"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_14" />
+
+            <TextView
+                android:id="@+id/list_item_break_time_end_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.2"
+                android:text="02:00"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_14" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/list_item_break_time_delete_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/icon_upload_image_delete" />
+
+    </LinearLayout>
+
+</LinearLayout>

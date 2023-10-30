@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical"
+    tools:context=".Main.MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragment_home_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Banner View -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <com.kenilt.loopingviewpager.widget.LoopingViewPager
+                    android:id="@+id/fragment_home_banner_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:overScrollMode="never" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_banner_count"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fragment_home_banner_count_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_color_ffffff" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- N Focus View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="21dp"
+                    android:text="N - FOCUS"
+                    android:textColor="@color/text_color_000000"
+                    android:textSize="@dimen/size_23"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fragment_home_focus_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:overScrollMode="never" />
+
+                <com.serte.horizontalscrollbar.HorizontalScrollBarView
+                    android:id="@+id/fragment_home_focus_scroll_bar_view"
+                    android:layout_width="50dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_boarder_scroll_e1e1e1"
+                    android:visibility="invisible"
+                    app:animToScrollingDuration="200"
+                    app:animToStaticDuration="1500"
+                    app:enableAnim="false"
+                    app:roundDimen="2dp"
+                    app:scrollColor="@color/bg_color_0d4d97"
+                    app:scrollingAlpha="2.0"
+                    app:staticAlpha="0.2" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="22dp"
+                android:background="@color/bg_color_f5f5f5" />
+
+            <!-- Item View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fragment_home_item_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:overScrollMode="never" />
+
+                <com.serte.horizontalscrollbar.HorizontalScrollBarView
+                    android:id="@+id/fragment_home_item_menu_scroll_bar_view"
+                    android:layout_width="50dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_boarder_scroll_e1e1e1"
+                    android:visibility="invisible"
+                    app:animToScrollingDuration="200"
+                    app:animToStaticDuration="1500"
+                    app:enableAnim="false"
+                    app:roundDimen="2dp"
+                    app:scrollColor="@color/bg_color_0d4d97"
+                    app:scrollingAlpha="2.0"
+                    app:staticAlpha="0.2" />
+
+            </LinearLayout>
+
+            <!-- Exchange Rate View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="28dp"
+                android:background="@color/bg_color_f5f5f5"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_today_exchange_rate"
+                        android:textColor="@color/text_color_000000"
+                        android:textSize="@dimen/size_13"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <!-- USD Text View -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="USD"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_13" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="1$"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_13" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/icon_arrow_swap" />
+
+                        <!-- KRW Text View -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="KRW"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_13" />
+
+                        <TextView
+                            android:id="@+id/fragment_home_krw_currency_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_13" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/icon_arrow_swap" />
+
+                        <!-- PHP Text View -->
+                        <TextView
+                            android:id="@+id/fragment_home_php_currency_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="PHP"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_13" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_13" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fragment_home_exchange_rate_view"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_color_0d4d97"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_calculator" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Banner Event View -->
+            <com.kenilt.loopingviewpager.widget.LoopingViewPager
+                android:id="@+id/fragment_home_sub_banner_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="16dp"
+                android:overScrollMode="never" />
+
+            <!-- Recommend View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/text_recommend_place"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_18"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fragment_home_recommend_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+
+            <!-- Company Expandable Layout View  -->
+            <com.skydoves.expandablelayout.ExpandableLayout
+                android:id="@+id/fragment_home_company_expandable_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:expandable_duration="300"
+                app:expandable_isExpanded="false"
+                app:expandable_parentLayout="@layout/expandable_layout_company_header"
+                app:expandable_secondLayout="@layout/expandable_layout_company_sub"
+                app:expandable_showSpinner="true"
+                app:expandable_spinner_color="#FFA000" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

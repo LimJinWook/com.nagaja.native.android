@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "510027294185",
+    "project_id": "nagaja-app-android",
+    "storage_bucket": "nagaja-app-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510027294185:android:34be3e3d21b0a504bc9778",
+        "android_client_info": {
+          "package_name": "com.nagaja.app.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510027294185-4ji3plkpjb37kjagbon8e3bee6i30l21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nagaja.app.android",
+            "certificate_hash": "9b55e7707b1d34b356350bc3ef65d8947b6c7a8a"
+          }
+        },
+        {
+          "client_id": "510027294185-dda6209lm457blfo2pc6ru9u6scsp8cj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nagaja.app.android",
+            "certificate_hash": "dc5718573b7b7426f85a0d5de52a96b208b313d9"
+          }
+        },
+        {
+          "client_id": "510027294185-pfcgisvn84g8ib35k2dii5boncr85ejs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nagaja.app.android",
+            "certificate_hash": "6db32968ce792a6348c39935ee05aedc0ad3b6b8"
+          }
+        },
+        {
+          "client_id": "510027294185-2opt0k02qu8og3u33akk7jpflh0mapfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu8pSXLVp-9wrKuK9N0EpuT_UXKstS02A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510027294185-2opt0k02qu8og3u33akk7jpflh0mapfc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "510027294185-2rr9ibia9da41e5houcn32olfvtass7c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nagaja.app.TestPro"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

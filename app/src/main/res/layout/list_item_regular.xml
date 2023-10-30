@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:fresco="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color_ffffff"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+        <LinearLayout 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/list_item_regular_image_view"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginStart="16dp"
+                    app:roundedCornerRadius="10dp"
+                    app:actualImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/bg_default"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="16dp" >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                    <TextView
+                            android:id="@+id/list_item_regular_name_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="나가자 음식점"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_14"
+                            android:textStyle="bold" />
+
+                    <ImageView
+                            android:id="@+id/list_item_regular_share_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/icon_share" />
+
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/list_item_regular_address_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:maxLines="1"
+                        android:text="주소 주소 주소 주소"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_12" />
+
+                <TextView
+                        android:id="@+id/list_item_regular_phone_number_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:maxLines="1"
+                        android:text="010-0000-0000"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_12" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center_vertical" >
+
+                    <LinearLayout
+                            android:id="@+id/list_item_regular_chat_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical" >
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_chat" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="@string/text_chatting"
+                                android:textColor="@color/text_color_9f9f9f"
+                                android:textSize="@dimen/size_12" />
+
+                    </LinearLayout>
+                    
+                    <View
+                            android:layout_width="1dp"
+                            android:layout_height="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@color/text_color_bebebe" />
+
+                    <LinearLayout
+                            android:id="@+id/list_item_regular_phone_call_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical" >
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_phone" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="@string/text_phone_call"
+                                android:textColor="@color/text_color_9f9f9f"
+                                android:textSize="@dimen/size_12" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_memo"
+                        android:textColor="@color/bg_color_0d4d97"
+                        android:textSize="@dimen/size_12" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" : "
+                        android:textColor="@color/bg_color_0d4d97"
+                        android:textSize="@dimen/size_12" />
+
+                <TextView
+                        android:id="@+id/list_item_regular_memo_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="한줄 메모, 한줄 메모, 한줄 메모"
+                        android:textColor="@color/bg_color_0d4d97"
+                        android:textSize="@dimen/size_12" />
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/list_item_regular_date_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="2023.01.01 22:20"
+                    android:textColor="@color/text_color_9f9f9f"
+                    android:textSize="@dimen/size_12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/bg_color_e1e1e1" />
+
+</LinearLayout>

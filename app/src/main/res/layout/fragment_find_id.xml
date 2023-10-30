@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color_ffffff"
+        android:orientation="vertical"
+        tools:context=".Login.LoginActivity">
+
+    <include
+            layout="@layout/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/text_message_forgot_id"
+            android:textColor="@color/text_color_222222"
+            android:textSize="@dimen/size_24" />
+
+    <TextView
+            android:id="@+id/fragment_find_id_forgot_message_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/text_message_forgot_id_2"
+            android:textColor="@color/text_color_9f9f9f"
+            android:textSize="@dimen/size_16" />
+
+    <LinearLayout
+            android:id="@+id/fragment_find_id_success_message_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <TextView
+                android:id="@+id/fragment_find_id_member_id_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="@string/text_message_password_setting"
+                android:textColor="@color/text_color_9f9f9f"
+                android:textSize="@dimen/size_16" />
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/fragment_find_id_phone_auth_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:background="@drawable/bg_button_radius_blue"
+            android:text="@string/text_phone_auth"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/size_16" />
+
+
+</LinearLayout>

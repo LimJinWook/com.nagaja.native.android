@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color_ffffff"
+        android:orientation="vertical"
+        tools:context=".Note.NoteActivity">
+
+    <include
+            layout="@layout/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/fragment_store_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <!-- Main Image Recycler View -->
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fragment_store_main_image_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never" />
+
+            <!-- Store Name -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="27dp"
+                        android:src="@drawable/icon_recommend" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="나가자피자 - 필리핀점"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_24"
+                        android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Store Review View -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                <!-- Recommend -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round"
+                        android:orientation="horizontal" >
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/text_recommend"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_12" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="0"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+                <!-- Good -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="11dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round"
+                        android:orientation="horizontal" >
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/text_good"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_12" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="1,098"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+                <!-- Favorite Store -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="11dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round"
+                        android:orientation="horizontal" >
+
+                    <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/icon_store_regula_2" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/text_good"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_12" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="898"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+                <!-- Review -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="11dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round"
+                        android:orientation="horizontal" >
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/text_review"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_12" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="100"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/bg_color_e1e1e1" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/bg_color_f5f5f5" />
+
+            <!-- Pick-up, Delivery -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                <!-- Delivery -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginEnd="26dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="배달 여부"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_12"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="가능, 12:00~18:00"
+                            android:textColor="@color/text_color_626262"
+                            android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+                <!-- Reservation -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginEnd="26dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="예약가능 여부"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_12"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="가능, 12:00~18:00"
+                            android:textColor="@color/text_color_626262"
+                            android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+                <!-- Pick Up -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginEnd="26dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="핍업/드랍 여부"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_12"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="가능, 12:00~18:00"
+                            android:textColor="@color/text_color_626262"
+                            android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+                <!-- Reservation Member -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginEnd="26dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="예약가능 인원"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_12"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="최대 20인"
+                            android:textColor="@color/text_color_626262"
+                            android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+                <!-- Payment -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginEnd="26dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="결제 수단"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_12"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="신용카드, 현금"
+                            android:textColor="@color/text_color_626262"
+                            android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/bg_color_e1e1e1" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/bg_color_f5f5f5"/>
+
+            <!-- Address, Map -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                <!-- Address Text View -->
+                <TextView
+                        android:id="@+id/fragment_store_address_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/text_color_626262"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold"/>
+
+                <!-- Map View -->
+                <fragment
+                        android:id="@+id/fragment_store_map_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/bg_color_f5f5f5"/>
+
+            <!-- Map Option -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <!-- Direction Guidance -->
+                <LinearLayout
+                        android:id="@+id/fragment_store_find_way_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center" >
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_map_direction_guidance" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/text_direction_guidance"
+                            android:textColor="@color/bg_color_0d4d97"
+                            android:textSize="@dimen/size_12"/>
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/bg_color_f5f5f5"/>
+
+                <!-- Navigation -->
+                <LinearLayout
+                        android:id="@+id/fragment_store_navigation_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center" >
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_map_navigation" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/text_navigation"
+                            android:textColor="@color/bg_color_0d4d97"
+                            android:textSize="@dimen/size_12"/>
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/bg_color_f5f5f5"/>
+
+                <!-- Address Clip Board -->
+                <LinearLayout
+                        android:id="@+id/fragment_store_copy_address_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center" >
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_map_clip_board" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/text_address_clip_board"
+                            android:textColor="@color/bg_color_0d4d97"
+                            android:textSize="@dimen/size_12"/>
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/bg_color_f5f5f5"/>
+
+                <!-- Phone Call -->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center" >
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_map_phone_call" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/text_phone_call"
+                            android:textColor="@color/bg_color_0d4d97"
+                            android:textSize="@dimen/size_12"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/bg_color_e1e1e1" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/bg_color_f5f5f5"/>
+            
+            <!-- Menu & ReView -->
+            <LinearLayout 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="31dp"
+                    android:orientation="vertical" >
+
+
+                <LinearLayout 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    
+                    <!-- Menu -->
+                    <LinearLayout
+                            android:id="@+id/fragment_store_menu_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                        <TextView
+                                android:id="@+id/fragment_store_menu_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_menu"
+                                android:textColor="@color/text_color_bbbbbb"
+                                android:textSize="@dimen/size_14" />
+
+                        <View
+                                android:id="@+id/fragment_store_menu_under_line_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="9dp"
+                                android:background="@color/bg_color_e2e7ee" />
+
+                    </LinearLayout>
+
+                    <!-- ReView -->
+                    <LinearLayout
+                            android:id="@+id/fragment_store_review_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                        <TextView
+                                android:id="@+id/fragment_store_review_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_review"
+                                android:textColor="@color/text_color_bbbbbb"
+                                android:textSize="@dimen/size_14" />
+
+                        <View
+                                android:id="@+id/fragment_store_review_under_line_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="9dp"
+                                android:background="@color/bg_color_e2e7ee" />
+
+                    </LinearLayout>
+                    
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/layout_store_menu"
+                    layout="@layout/layout_store_menu_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <include
+                        android:id="@+id/layout_store_review"
+                        layout="@layout/layout_store_review_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:orientation="horizontal" >
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/bg_color_000000"
+                android:text="@string/text_inquiry"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="@dimen/size_17"
+                android:textStyle="bold"/>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/bg_color_0d4d97"
+                android:orientation="vertical" >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/text_today_close"
+                    android:textColor="@color/text_color_d3e4fa"
+                    android:textSize="@dimen/size_10"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/text_make_reservation"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="@dimen/size_17"
+                    android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

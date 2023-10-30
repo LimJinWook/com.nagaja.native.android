@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        layout="@layout/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Category Text View -->
+            <TextView
+                android:id="@+id/fragment_faq_detail_category_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="카테고리"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_14" />
+
+            <!-- Title Text View -->
+            <TextView
+                android:id="@+id/fragment_faq_detail_title_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:text="제목제목"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_18"
+                android:textStyle="bold" />
+
+            <!-- Date And View Count -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fragment_faq_detail_date_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_color_9f9f9f"
+                    android:textSize="@dimen/size_12" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_view_count"
+                        android:textColor="@color/text_color_9f9f9f"
+                        android:textSize="@dimen/size_12" />
+
+                    <TextView
+                        android:id="@+id/fragment_faq_detail_view_count_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="10"
+                        android:textColor="@color/text_color_9f9f9f"
+                        android:textSize="@dimen/size_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/bg_color_0D000000" />
+
+            <!--&lt;!&ndash; Download View &ndash;&gt;
+            <LinearLayout
+                android:id="@+id/fragment_faq_detail_download_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragment_faq_detail_download_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:drawableLeft="@drawable/icon_download"
+                    android:drawablePadding="7dp"
+                    android:text="첨부된 파일입니다.jpeg"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/bg_color_0D000000" />
+
+            </LinearLayout>-->
+
+            <!-- Main Image Recycler View -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_faq_detail_image_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:overScrollMode="never" />
+
+            <!-- Content Text View -->
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fragment_faq_detail_content_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="본문 내용입니다. 본문내용을 여기에 출력 됩니다.\n\n간혹 내용에 따른 길이가 길어 지는 경우는 본문에 스크롤이 생기도록 하는 방법과 게시판 자체에 스크롤이 생기도록 하는 방법이 있습니다.\n\n\n\n상황에 따라 생성 하도록 합니다.본문 내용입니다. 본문내용을 여기에 출력 됩니다.\n\n간혹 내용에 따른 길이가 길어 지는 경우는 본문에 스크롤이 생기도록 하는 방법과 게시판 자체에 스크롤이 생기도록 하는 방법이 있습니다."
+                        android:textColor="@color/text_color_626262"
+                        android:textSize="@dimen/size_13" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_faq_detail_download_popup_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_radius_enable_gray_2"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/fragment_faq_detail_download_progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:progressDrawable="@drawable/progress" />
+
+            <LinearLayout
+                android:id="@+id/fragment_faq_detail_download_percent_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fragment_faq_detail_download_percent_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/text_download_percent"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/fragment_faq_detail_download_percent_2_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="%)"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_faq_detail_loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/progressbar_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/text_loading"
+                android:textColor="@color/bg_color_0d4d97"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

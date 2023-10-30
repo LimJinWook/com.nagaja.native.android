@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <View
+            android:id="@+id/list_item_recommend_empty_view"
+            android:layout_width="16dp"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="255dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/list_item_recommend_image_view"
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:background="@drawable/bg_default"
+                app:actualImageScaleType="fitXY"
+                app:roundedCornerRadius="10dp" />
+
+            <TextView
+                android:id="@+id/list_item_recommend_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/list_item_recommend_sub_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_13" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/list_item_recommend_pick_up_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="3dp"
+                    android:text="@string/text_pick_up_and_drop"
+                    android:textColor="@color/text_color_616161"
+                    android:textSize="@dimen/size_10"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/list_item_recommend_delivery_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="3dp"
+                    android:text="@string/text_delivery"
+                    android:textColor="@color/text_color_616161"
+                    android:textSize="@dimen/size_10"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/list_item_recommend_reservation_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="3dp"
+                    android:text="@string/text_reservation"
+                    android:textColor="@color/text_color_616161"
+                    android:textSize="@dimen/size_10"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/list_item_recommend_parking_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="3dp"
+                    android:text="@string/text_parking"
+                    android:textColor="@color/text_color_616161"
+                    android:textSize="@dimen/size_10"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/list_item_recommend_pet_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="3dp"
+                    android:text="@string/text_pet"
+                    android:textColor="@color/text_color_616161"
+                    android:textSize="@dimen/size_10"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/list_item_recommend_event_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="9dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/icon_star" />
+
+                <TextView
+                    android:id="@+id/list_item_recommend_event_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:maxLines="2"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/bg_color_0d4d97"
+                    android:textSize="@dimen/size_11"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

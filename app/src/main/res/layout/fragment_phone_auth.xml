@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical"
+    tools:context=".PhoneAuth.PhoneAuthActivity">
+
+    <include
+        layout="@layout/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/text_phone_number"
+        android:textColor="@color/text_color_222222"
+        android:textSize="@dimen/size_14" />
+
+    <!-- Phone Number Input View -->
+    <LinearLayout
+        android:id="@+id/fragment_phone_auth_phone_number_input_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!--<Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:background="@drawable/bg_code" />-->
+
+        <!-- Select Nation Spinner -->
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/fragment_phone_auth_nation_code_spinner"
+            android:layout_width="120dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_boarder"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/text_color_222222"
+            android:textColorHint="@color/text_color_222222"
+            android:textSize="@dimen/size_14"
+            app:spinner_arrow_drawable="@drawable/icon_arrow"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_item_height="46dp"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+            app:spinner_popup_elevation="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/bg_boarder">
+
+            <EditText
+                android:id="@+id/fragment_phone_auth_phone_number_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="9dp"
+                android:background="@null"
+                android:hint="@string/text_hint_input_phone_number"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:textColor="@color/text_color_222222"
+                android:textColorHint="@color/text_color_bebebe"
+                android:textSize="@dimen/size_14" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fragment_phone_auth_number_send_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_disable"
+        android:gravity="center"
+        android:text="@string/text_send_phone_number_auth"
+        android:textColor="@color/text_color_26000000"
+        android:textSize="@dimen/size_14" />
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_box_line"
+        android:gravity="center"
+        android:text="@string/text_resend_auth_number"
+        android:textColor="@color/text_color_222222"
+        android:textSize="@dimen/size_14" />-->
+
+    <LinearLayout
+        android:id="@+id/fragment_phone_auth_confirm_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_input_auth_number"
+            android:textColor="@color/text_color_222222"
+            android:textSize="@dimen/size_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_code_phone_number"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/fragment_phone_auth_code_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="9dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/text_hint_input_auth_code"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:textColor="@color/text_color_222222"
+                android:textColorHint="@color/text_color_bebebe"
+                android:textSize="@dimen/size_14" />
+
+            <!--<TextView
+                android:id="@+id/fragment_phone_auth_timer_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="13dp"
+                android:text="00:00"
+                android:textColor="@color/text_color_ff4755"
+                android:textSize="@dimen/size_14" />-->
+
+            <ir.samanjafari.easycountdowntimer.EasyCountDownTextview
+                android:id="@+id/fragment_phone_auth_timer_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="13dp"
+                app:digitBackground="@android:color/transparent"
+                app:minute="3"
+                app:second="00"
+                app:setAnimation="false"
+                app:showHours="false"
+                app:start_automatically="false"
+                app:textColor="@color/text_color_ff4755"
+                app:textSize="@dimen/size_14"
+                app:useFarsiNumeral="false" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_phone_auth_confirm_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_disable"
+            android:gravity="center"
+            android:text="@string/text_confirm_auth_number"
+            android:textColor="@color/text_color_26000000"
+            android:textSize="@dimen/size_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_auth_number_caption"
+            android:textColor="@color/text_color_626262"
+            android:textSize="@dimen/size_12" />
+
+    </LinearLayout>
+
+</LinearLayout>

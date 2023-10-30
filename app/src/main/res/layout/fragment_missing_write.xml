@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        layout="@layout/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/fragment_faq_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Category -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_category"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fragment_missing_write_category_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder_text_select_e1e1e1_f5f5f5"
+                        android:gravity="center_vertical"
+                        android:paddingStart="17dp"
+                        android:textColor="@color/text_color_9f9f9f"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <!-- Area View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_location"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_main_area"
+                                android:textColor="@color/text_color_222222"
+                                android:textSize="@dimen/size_12" />
+
+                            <com.skydoves.powerspinner.PowerSpinnerView
+                                android:id="@+id/fragment_missing_write_main_area_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/bg_code_phone_number_2"
+                                android:gravity="center_vertical"
+                                android:hint="@string/text_select"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:textColor="@color/text_color_222222"
+                                android:textColorHint="@color/text_color_bebebe"
+                                android:textSize="@dimen/size_14"
+                                app:spinner_arrow_drawable="@drawable/icon_arrow"
+                                app:spinner_arrow_gravity="end"
+                                app:spinner_arrow_padding="8dp"
+                                app:spinner_item_height="46dp"
+                                app:spinner_popup_animation="dropdown"
+                                app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+                                app:spinner_popup_elevation="14dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_sub_area"
+                                android:textColor="@color/text_color_222222"
+                                android:textSize="@dimen/size_12" />
+
+                            <com.skydoves.powerspinner.PowerSpinnerView
+                                android:id="@+id/fragment_missing_write_sub_area_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/bg_code_phone_number_2"
+                                android:gravity="center_vertical"
+                                android:hint="@string/text_select"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:textColor="@color/text_color_222222"
+                                android:textColorHint="@color/text_color_bebebe"
+                                android:textSize="@dimen/size_14"
+                                app:spinner_arrow_drawable="@drawable/icon_arrow"
+                                app:spinner_arrow_gravity="end"
+                                app:spinner_arrow_padding="8dp"
+                                app:spinner_item_height="46dp"
+                                app:spinner_popup_animation="dropdown"
+                                app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+                                app:spinner_popup_elevation="14dp"
+                                app:spinner_popup_height="200dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Area Desc -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_address_description"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_boarder">
+
+                            <EditText
+                                android:id="@+id/fragment_missing_write_area_desc_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@null"
+                                android:hint="@string/text_hint_input_area_description"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:textColor="@color/text_color_222222"
+                                android:textColorHint="@color/text_color_bebebe"
+                                android:textSize="@dimen/size_14" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/fragment_missing_write_address_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_location_black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Post Title -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_title"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder">
+
+                        <EditText
+                            android:id="@+id/fragment_missing_write_title_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@null"
+                            android:hint="@string/text_hint_input_board_title"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Register Image -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_register_image"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/fragment_missing_write_image_upload_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:overScrollMode="never" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Content View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_contents"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder">
+
+                        <EditText
+                            android:id="@+id/fragment_missing_write_content_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:hint="@string/text_hint_input_contents"
+                            android:inputType="textMultiLine"
+                            android:scrollbars="vertical"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/fragment_missing_write_loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/bg_radius_enable_gray_2"
+            android:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/fragment_missing_write_loading_lottie_view"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:lottie_rawRes="@raw/airplane2"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.2"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/text_loading"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fragment_missing_write_register_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/bg_color_0d4d97"
+        android:gravity="center"
+        android:text="@string/text_register"
+        android:textColor="@color/text_color_ffffff"
+        android:textSize="@dimen/size_17"
+        android:textStyle="bold" />
+
+</LinearLayout>

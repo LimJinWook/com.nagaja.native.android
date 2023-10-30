@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical"
+    tools:context=".Main.MainActivity">
+
+    <include
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        layout="@layout/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/fragment_reservation_swipe_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- Category View -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fragment_reservation_category_recycler_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:overScrollMode="never" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_reservation_category_next_view"
+                    android:layout_width="31dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/text_color_bebebe"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_category_next" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <!-- Tab View -->
+                <LinearLayout
+                    android:id="@+id/fragment_reservation_tab_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color_e1e1e1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal">
+
+                        <!-- All Text View -->
+                        <TextView
+                            android:id="@+id/fragment_reservation_all_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/text_board_category_all"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_14" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/bg_color_e1e1e1" />
+
+                        <!-- Status Text View -->
+                        <TextView
+                            android:id="@+id/fragment_reservation_status_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/text_reservation_list"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_14" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/bg_color_e1e1e1" />
+
+                        <!-- Cancel Text View -->
+                        <TextView
+                            android:id="@+id/fragment_reservation_cancel_status_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/text_cancel_list"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_14" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/bg_color_e1e1e1" />
+
+                        <!-- Date Text View -->
+                        <TextView
+                            android:id="@+id/fragment_reservation_date_search_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/text_period_search"
+                            android:textColor="@color/text_color_000000"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color_e1e1e1" />
+
+                </LinearLayout>
+
+                <!-- Recycler View -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fragment_reservation_status_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/fragment_reservation_tab_view"
+                    android:background="@color/bg_color_f5f5f5"
+                    android:overScrollMode="never"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/fragment_reservation_empty_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:layout_below="@id/fragment_reservation_tab_view"
+                    android:text="@string/text_message_no_search_result_found"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:visibility="gone"/>
+
+
+                <include
+                    android:id="@+id/fragment_reservation_information_view"
+                    layout="@layout/layout_reservation_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="14dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_reservation_loading_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_radius_enable_gray_2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/fragment_reservation_loading_lottie_view"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        app:lottie_autoPlay="false"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/airplane2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginBottom="20dp"
+                        android:letterSpacing="0.2"
+                        android:text="@string/text_loading"
+                        android:textColor="@color/text_color_ffffff"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

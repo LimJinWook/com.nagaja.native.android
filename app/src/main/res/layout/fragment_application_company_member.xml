@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        layout="@layout/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/fragment_application_company_member_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Company Information -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/text_company_information"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/fragment_application_company_member_type_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder"
+                        android:gravity="center_vertical"
+                        android:hint="@string/text_select_type"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textColor="@color/text_color_222222"
+                        android:textColorHint="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_14"
+                        app:spinner_arrow_drawable="@drawable/icon_spinner_arrow"
+                        app:spinner_arrow_gravity="end"
+                        app:spinner_arrow_padding="8dp"
+                        app:spinner_item_array="@array/array_used_market_list_all"
+                        app:spinner_item_height="46dp"
+                        app:spinner_popup_height="250dp"
+                        app:spinner_popup_animation="dropdown"
+                        app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+                        app:spinner_popup_elevation="14dp" />
+
+                </LinearLayout>
+
+                <!-- Register Image -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_main_image"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/fragment_application_company_member_image_upload_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:overScrollMode="never" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Company Name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_company_name"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder">
+
+                        <EditText
+                            android:id="@+id/fragment_application_company_member_company_name_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginEnd="17dp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:hint="@string/text_input_company_name"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Company Address -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_company_address_and_location"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder">
+
+                        <TextView
+                            android:id="@+id/fragment_application_company_member_address_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginEnd="17dp"
+                            android:maxLines="1"
+                            android:hint="@string/text_input_company_address"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder">
+
+                        <EditText
+                            android:id="@+id/fragment_application_company_member_address_detail_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginEnd="17dp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:hint="@string/text_input_company_detail_address"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_boarder">
+
+                            <TextView
+                                android:id="@+id/fragment_application_company_member_location_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginEnd="17dp"
+                                android:maxLines="1"
+                                android:hint="@string/text_input_company_location"
+                                android:textColor="@color/text_color_222222"
+                                android:textColorHint="@color/text_color_bebebe"
+                                android:textSize="@dimen/size_14" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/fragment_application_company_member_map_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_location_black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Manager Information -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_manager_information"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder">
+
+                        <EditText
+                            android:id="@+id/fragment_application_company_member_manager_name_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginEnd="17dp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:hint="@string/text_input_manager_name"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Other Information -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_other_information"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder">
+
+                        <EditText
+                            android:id="@+id/fragment_application_company_member_phone_number_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginEnd="17dp"
+                            android:background="@null"
+                            android:inputType="phone"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:hint="@string/text_input_phone_number"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder">
+
+                        <EditText
+                            android:id="@+id/fragment_application_company_member_email_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginEnd="17dp"
+                            android:background="@null"
+                            android:inputType="textEmailAddress"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:hint="@string/text_input_email_information"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder">
+
+                        <EditText
+                            android:id="@+id/fragment_application_company_member_facebook_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginEnd="17dp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:hint="@string/text_input_facebook_information"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder">
+
+                        <EditText
+                            android:id="@+id/fragment_application_company_member_kakao_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginEnd="17dp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:hint="@string/text_input_kakao_talk_information"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder">
+
+                        <EditText
+                            android:id="@+id/fragment_application_company_member_line_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginEnd="17dp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:imeOptions="actionDone"
+                            android:maxLines="1"
+                            android:hint="@string/text_input_line_information"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- File -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_register_attachment"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_boarder">
+
+                        <TextView
+                            android:id="@+id/fragment_application_company_member_file_upload_name_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/text_attaching_files"
+                            android:textColor="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                        <ImageView
+                            android:id="@+id/fragment_application_company_member_file_upload_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="9dp"
+                            android:src="@drawable/icon_attachment" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fragment_application_company_member_file_upload_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/text_application_company_message_1"
+                    android:textColor="@color/text_color_626262"
+                    android:textSize="@dimen/size_12" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/text_application_company_message_2"
+                    android:textColor="@color/text_color_626262"
+                    android:textSize="@dimen/size_12" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/text_application_company_message_3"
+                    android:textColor="@color/text_color_626262"
+                    android:textSize="@dimen/size_12" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="50dp"
+                    android:text="@string/text_application_company_message_4"
+                    android:textColor="@color/text_color_626262"
+                    android:textSize="@dimen/size_12" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/fragment_application_company_loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/bg_radius_enable_gray_2"
+            android:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/fragment_application_company_loading_lottie_view"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:lottie_rawRes="@raw/airplane2"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.2"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/text_loading"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fragment_application_company_member_register_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/bg_color_0d4d97"
+        android:gravity="center"
+        android:text="@string/text_key_word_register"
+        android:textColor="@color/text_color_ffffff"
+        android:textSize="@dimen/size_17"
+        android:textStyle="bold" />
+
+</LinearLayout>

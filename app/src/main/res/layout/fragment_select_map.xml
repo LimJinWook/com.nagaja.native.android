@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_color_ffffff"
+              android:orientation="vertical">
+
+    <include
+            layout="@layout/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+                android:id="@+id/fragment_select_map_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:overScrollMode="never">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/fragment_select_map_main_address_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:paddingStart="17dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_boarder_text_select_e1e1e1_f5f5f5"
+                        android:textColor="@color/text_color_9f9f9f"
+                        android:textSize="@dimen/size_14" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                    <TextView
+                            android:id="@+id/fragment_select_map_sub_address_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp"
+                            android:paddingStart="17dp"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_boarder_text_select_e1e1e1_f5f5f5"
+                            android:textColor="@color/text_color_9f9f9f"
+                            android:textSize="@dimen/size_14" />
+                    
+                    <LinearLayout
+                            android:id="@+id/fragment_select_map_my_location_view"
+                            android:layout_width="48dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_boarder">
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_location" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_my_location"
+                                android:textColor="@color/text_color_9f9f9f"
+                                android:textSize="@dimen/size_10" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/fragment_select_map_location_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:paddingStart="17dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_boarder_text_select_e1e1e1_f5f5f5"
+                        android:textColor="@color/text_color_000000"
+                        android:textSize="@dimen/size_14" />
+
+                <!-- Current Location Setting -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="27dp"
+                            android:src="@drawable/icon_location" />
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/text_setting_current_location"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_12" />
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="19dp"
+                            android:src="@drawable/icon_next" />
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/bg_color_e1e1e1" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/bg_color_f5f5f5" />
+
+                <!-- Map View -->
+                <fragment
+                        android:id="@+id/fragment_select_map_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="19dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:orientation="vertical" />
+
+                <TextView
+                        android:id="@+id/fragment_select_map_address_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_16"
+                        android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/fragment_select_map_region_setting_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:background="@color/bg_color_0d4d97"
+            android:gravity="center"
+            android:text="@string/text_region_setting"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/size_17"
+            android:textStyle="bold"/>
+
+</LinearLayout>

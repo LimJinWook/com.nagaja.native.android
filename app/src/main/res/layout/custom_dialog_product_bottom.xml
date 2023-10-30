@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/test"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_boarder_half"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/custom_dialog_product_bottom_title_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:text="@string/text_register_product"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_16"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/custom_dialog_product_bottom_cancel_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:padding="10dp"
+                            android:src="@drawable/icon_cancel" />
+
+                    </LinearLayout>
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/custom_dialog_product_bottom_category_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_boarder"
+                        android:gravity="center_vertical"
+                        android:hint="@string/text_select_type"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textColor="@color/text_color_222222"
+                        android:textColorHint="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_14"
+                        app:spinner_arrow_drawable="@drawable/icon_spinner_arrow"
+                        app:spinner_arrow_gravity="end"
+                        app:spinner_arrow_padding="8dp"
+                        app:spinner_item_array="@array/array_used_market_list_all"
+                        app:spinner_item_height="46dp"
+                        app:spinner_popup_animation="dropdown"
+                        app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+                        app:spinner_popup_elevation="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_boarder" >
+
+                        <EditText
+                            android:id="@+id/custom_dialog_product_bottom_product_name_edit_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:maxLines="1"
+                            android:imeOptions="actionDone"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:hint="@string/text_hint_input_product_name"
+                            android:textColor="@color/text_color_222222"
+                            android:textColorHint="@color/text_color_bebebe"
+                            android:textSize="@dimen/size_14" />
+
+                        <ImageView
+                            android:id="@+id/custom_dialog_product_bottom_product_name_delete_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="12dp"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_upload_image_delete"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/custom_dialog_product_bottom_price_dollar_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="28dp"
+                            android:gravity="center"
+                            android:text="@string/text_currency_dollar"
+                            android:textColor="@color/text_color_1a171b"
+                            android:textSize="@dimen/size_16"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center_vertical|end"
+                            android:background="@drawable/bg_boarder" >
+
+                            <EditText
+                                android:id="@+id/custom_dialog_product_bottom_price_dollar_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:inputType="numberDecimal"
+                                android:imeOptions="actionNext"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginEnd="17dp"
+                                android:textColor="@color/text_color_222222"
+                                android:textColorHint="@color/text_color_bebebe"
+                                android:textSize="@dimen/size_14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/custom_dialog_product_bottom_price_won_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="28dp"
+                            android:gravity="center"
+                            android:text="@string/text_currency_won"
+                            android:textColor="@color/text_color_1a171b"
+                            android:textSize="@dimen/size_16"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center_vertical|end"
+                            android:background="@drawable/bg_boarder" >
+
+                            <EditText
+                                android:id="@+id/custom_dialog_product_bottom_price_won_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:inputType="numberDecimal"
+                                android:imeOptions="actionNext"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginEnd="17dp"
+                                android:textColor="@color/text_color_222222"
+                                android:textColorHint="@color/text_color_bebebe"
+                                android:textSize="@dimen/size_14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/custom_dialog_product_bottom_price_peso_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="28dp"
+                            android:gravity="center"
+                            android:text="@string/text_currency_peso"
+                            android:textColor="@color/text_color_1a171b"
+                            android:textSize="@dimen/size_16"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center_vertical|end"
+                            android:background="@drawable/bg_boarder" >
+
+                            <EditText
+                                android:id="@+id/custom_dialog_product_bottom_price_peso_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:inputType="numberDecimal"
+                                android:imeOptions="actionNext"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginEnd="17dp"
+                                android:textColor="@color/text_color_222222"
+                                android:textColorHint="@color/text_color_bebebe"
+                                android:textSize="@dimen/size_14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/custom_dialog_product_bottom_price_yuan_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="28dp"
+                            android:gravity="center"
+                            android:text="@string/text_currency_yuan"
+                            android:textColor="@color/text_color_1a171b"
+                            android:textSize="@dimen/size_16"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center_vertical|end"
+                            android:background="@drawable/bg_boarder" >
+
+                            <EditText
+                                android:id="@+id/custom_dialog_product_bottom_price_yuan_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:inputType="numberDecimal"
+                                android:imeOptions="actionNext"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginEnd="17dp"
+                                android:textColor="@color/text_color_222222"
+                                android:textColorHint="@color/text_color_bebebe"
+                                android:textSize="@dimen/size_14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/custom_dialog_product_bottom_price_yen_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="28dp"
+                            android:gravity="center"
+                            android:text="@string/text_currency_yen"
+                            android:textColor="@color/text_color_1a171b"
+                            android:textSize="@dimen/size_16"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center_vertical|end"
+                            android:background="@drawable/bg_boarder" >
+
+                            <EditText
+                                android:id="@+id/custom_dialog_product_bottom_price_yen_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:inputType="numberDecimal"
+                                android:imeOptions="actionNext"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginEnd="17dp"
+                                android:textColor="@color/text_color_222222"
+                                android:textColorHint="@color/text_color_bebebe"
+                                android:textSize="@dimen/size_14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/text_contents"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_14"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@drawable/bg_boarder" >
+
+                            <EditText
+                                android:id="@+id/custom_dialog_product_bottom_content_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@null"
+                                android:gravity="top"
+                                android:hint="@string/text_hint_input_contents"
+                                android:imeOptions="actionDone"
+                                android:inputType="textMultiLine"
+                                android:scrollbars="vertical"
+                                android:textColor="@color/text_color_222222"
+                                android:textColorHint="@color/text_color_bebebe"
+                                android:textSize="@dimen/size_14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/text_register_main_image"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_14"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_boarder" >
+
+                            <TextView
+                                android:id="@+id/custom_dialog_product_image_name_text_view"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginEnd="17dp"
+                                android:text="@string/text_hint_register_main_image"
+                                android:textColor="@color/text_color_bebebe"
+                                android:textSize="@dimen/size_14" />
+
+                            <ImageView
+                                android:id="@+id/custom_dialog_product_select_image_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="9dp"
+                                android:src="@drawable/icon_attachment" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_color_ffffff" >
+
+                    <TextView
+                        android:id="@+id/custom_dialog_product_bottom_confirm_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="30dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_button_radius_blue"
+                        android:text="@string/text_register"
+                        android:textColor="@color/text_color_ffffff"
+                        android:textSize="@dimen/size_14"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/custom_dialog_product_bottom_register_loading_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_radius_enable_gray_2"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/custom_dialog_product_bottom_register_loading_lottie_view"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/airplane2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginBottom="20dp"
+                    android:letterSpacing="0.2"
+                    android:text="@string/text_loading"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

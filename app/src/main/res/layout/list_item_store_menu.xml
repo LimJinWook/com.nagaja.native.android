@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="191dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="17dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/list_item_store_menu_image_view"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                app:roundedCornerRadius="10dp"
+                app:backgroundImage="@color/bg_color_f5f5f5"
+                app:actualImageScaleType="fitXY"
+                app:placeholderImage="@drawable/bg_default"
+                fresco:placeholderImage="@drawable/bg_default"
+                fresco:failureImage="@drawable/bg_default"
+                app:failureImageScaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/list_item_store_menu_name_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="asdjkhasdkhasdkhasdjkhasdjkhasdjkasdhjkhasdjkasdhjkasdhasjk"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+                <!-- Price View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_price"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:text=":"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:id="@+id/list_item_store_menu_main_price_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="12312312"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:id="@+id/list_item_store_menu_main_price_currency_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/text_currency_won"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:id="@+id/list_item_store_menu_price_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text="asdasdasdasd"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/list_item_store_menu_message_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:maxLines="2"
+                    android:textColor="@color/text_color_9f9f9f"
+                    android:textSize="@dimen/size_14" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_item_store_menu_currency_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:overScrollMode="never" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/bg_color_0D000000" />
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color_ffffff"
+        android:orientation="vertical"
+        tools:context=".KeyWord.KeyWordActivity">
+
+    <include
+            layout="@layout/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/fragment_key_word_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <!-- Used Market -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:background="@color/bg_color_e8e8e8">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/text_used_market_key_word"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_14"
+                            android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/fragment_key_word_used_market_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:overScrollMode="never" />
+
+                <TextView
+                        android:id="@+id/fragment_key_word_used_market_empty_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/text_empty_key_word"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <!-- Board -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical" >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:background="@color/bg_color_e8e8e8">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/text_board_key_word"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_14"
+                            android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/fragment_key_word_board_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        android:overScrollMode="never" />
+
+                <TextView
+                        android:id="@+id/fragment_key_word_board_empty_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/text_empty_key_word"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14"
+                        android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+            android:id="@+id/fragment_key_word_register_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:gravity="center"
+            android:background="@color/bg_color_0d4d97"
+            android:text="@string/text_key_word_register"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/size_17"
+            android:textStyle="bold" />
+
+</LinearLayout>

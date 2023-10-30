@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+    
+    <View
+            android:id="@+id/list_item_note_detail_empty_view"
+            android:layout_width="16dp"
+            android:layout_height="1dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/list_item_note_detail_image_view"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:paddingEnd="5dp"
+            app:roundedCornerRadius="10dp"
+            app:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/bg_default"/>
+
+</LinearLayout>

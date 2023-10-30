@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="10dp">
+
+        <View
+            android:id="@+id/list_item_focus_empty_view"
+            android:layout_width="16dp"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/list_item_focus_image_view"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                app:actualImageScaleType="fitXY"
+                app:backgroundImage="@color/bg_color_f5f5f5"
+                app:roundedCornerRadius="10dp" />
+
+            <TextView
+                android:id="@+id/list_item_focus_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:maxLines="2"
+                android:gravity="center"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_11" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

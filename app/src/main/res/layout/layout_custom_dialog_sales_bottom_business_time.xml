@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="@string/text_sales_start_time"
+            android:textColor="@color/text_color_222222"
+            android:textSize="@dimen/size_16" />
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/layout_custom_dialog_sales_bottom_business_time_start_spinner"
+            android:layout_width="170dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_boarder"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/text_color_222222"
+            android:textColorHint="@color/text_color_222222"
+            android:textSize="@dimen/size_14"
+            app:spinner_arrow_drawable="@drawable/icon_spinner_arrow"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_item_array="@array/array_sales_time"
+            app:spinner_popup_max_height="120dp"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+            app:spinner_popup_elevation="14dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="@string/text_sales_end_time"
+            android:textColor="@color/text_color_222222"
+            android:textSize="@dimen/size_16" />
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/layout_custom_dialog_sales_bottom_business_time_end_spinner"
+            android:layout_width="170dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_boarder"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/text_color_222222"
+            android:textColorHint="@color/text_color_222222"
+            android:textSize="@dimen/size_14"
+            app:spinner_arrow_drawable="@drawable/icon_spinner_arrow"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_item_array="@array/array_sales_time"
+            app:spinner_popup_max_height="120dp"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+            app:spinner_popup_elevation="14dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

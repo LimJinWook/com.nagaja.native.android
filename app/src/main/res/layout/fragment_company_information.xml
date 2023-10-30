@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        layout="@layout/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/fragment_faq_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Company Default -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/fragment_company_information_company_image_view"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_marginStart="16dp"
+                        app:roundedCornerRadius="10dp"
+                        app:actualImageScaleType="fitXY"
+                        fresco:placeholderImage="@drawable/bg_default" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical">
+
+                        <!-- Company Name -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:id="@+id/fragment_company_information_company_name_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_color_222222"
+                                android:textSize="@dimen/size_14"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/fragment_company_information_company_setting_image_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:layout_marginStart="3dp"
+                                android:src="@drawable/icon_setting_2" />
+
+                        </LinearLayout>
+
+                        <!-- Company Type -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:text="@string/text_company_type_name"
+                                android:textColor="@color/text_color_9f9f9f"
+                                android:textSize="@dimen/size_12" />
+
+                            <TextView
+                                android:id="@+id/fragment_company_information_company_type_text_view"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/text_color_222222"
+                                android:textSize="@dimen/size_12" />
+
+                        </LinearLayout>
+
+                        <!-- Company Manager -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:text="@string/text_manager"
+                                android:textColor="@color/text_color_9f9f9f"
+                                android:textSize="@dimen/size_12" />
+
+                            <TextView
+                                android:id="@+id/fragment_company_information_company_manager_text_view"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/text_color_222222"
+                                android:textSize="@dimen/size_12" />
+
+                        </LinearLayout>
+
+                        <!-- Company Address -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:text="@string/text_address"
+                                android:textColor="@color/text_color_9f9f9f"
+                                android:textSize="@dimen/size_12" />
+
+                            <TextView
+                                android:id="@+id/fragment_company_information_company_address_text_view"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:maxLines="2"
+                                android:textColor="@color/text_color_222222"
+                                android:textSize="@dimen/size_12" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Point -->
+                <LinearLayout
+                    android:id="@+id/fragment_company_information_company_point_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@color/bg_color_f5f5f5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icon_point_2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="13dp"
+                        android:text="@string/text_point"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_gp"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" : "
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_company_gp_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="0"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <!-- Manager, Front, Serving -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_boarder" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginEnd="19dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/text_master"
+                            android:textColor="@color/text_color_9f9f9f"
+                            android:textSize="@dimen/size_12" />
+
+                        <TextView
+                            android:id="@+id/fragment_company_information_master_name_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_12" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginEnd="19dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/text_manager_2"
+                            android:textColor="@color/text_color_9f9f9f"
+                            android:textSize="@dimen/size_12" />
+
+                        <TextView
+                            android:id="@+id/fragment_company_information_manager_name_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_12" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginEnd="19dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/text_front"
+                            android:textColor="@color/text_color_9f9f9f"
+                            android:textSize="@dimen/size_12" />
+
+                        <TextView
+                            android:id="@+id/fragment_company_information_front_count_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_12" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="19dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginEnd="19dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:text="@string/text_hall_serving"
+                            android:textColor="@color/text_color_9f9f9f"
+                            android:textSize="@dimen/size_12" />
+
+                        <TextView
+                            android:id="@+id/fragment_company_information_serving_name_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_color_222222"
+                            android:textSize="@dimen/size_12" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="1dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_boarder" >
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_status_ready_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/text_ready"
+                        android:textColor="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_14" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_color_e1e1e1" />
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_status_open_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/text_open"
+                        android:textColor="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_14" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_color_e1e1e1" />
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_status_rest_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/text_rest"
+                        android:textColor="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_14" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_color_e1e1e1" />
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_status_close_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/text_company_close"
+                        android:textColor="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_14" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_color_e1e1e1" />
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_status_finish_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/text_finish"
+                        android:textColor="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+
+                <!-- Management -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_status_sales_management_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_boarder_black"
+                        android:text="@string/text_sales_management"
+                        android:textColor="@color/text_color_000000"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_status_product_management_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="2dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_boarder_black"
+                        android:text="@string/text_product_management"
+                        android:textColor="@color/text_color_000000"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <!-- Line View -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@color/bg_color_e1e1e1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/bg_color_f5f5f5" />
+
+
+                
+                
+                <!-- Company Note -->
+                <LinearLayout
+                    android:id="@+id/fragment_company_information_note_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icon_company_note" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="13dp"
+                        android:text="@string/text_note_box"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_note_count_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_color_e1e1e1" />
+
+                <!-- Regular Note -->
+                <LinearLayout
+                    android:id="@+id/fragment_company_information_regular_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icon_company_regular" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="13dp"
+                        android:text="@string/text_ones_favorite"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_regular_count_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_color_e1e1e1" />
+
+                <!-- Reservation -->
+                <LinearLayout
+                    android:id="@+id/fragment_company_information_reservation_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icon_company_reservation" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="13dp"
+                        android:text="@string/text_reservation_list"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_reservation_count_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_color_e1e1e1" />
+
+                <!-- Used Market -->
+                <LinearLayout
+                    android:id="@+id/fragment_company_information_used_market_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icon_company_used_market" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="13dp"
+                        android:text="@string/text_used_list"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/text_noti"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_color_e1e1e1" />
+
+                <!-- Job -->
+                <LinearLayout
+                    android:id="@+id/fragment_company_information_job_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icon_company_job" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="13dp"
+                        android:text="@string/text_job_list"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/text_noti"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_color_e1e1e1" />
+
+                <!-- Report -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icon_company_report" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="13dp"
+                        android:text="@string/text_report_list"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:id="@+id/fragment_company_information_declare_count_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_color_e1e1e1"
+                    android:visibility="gone"/>
+
+                <!-- Withdrawal -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icon_company_withdrawal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="13dp"
+                        android:text="@string/text_company_withdrawal"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_14" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

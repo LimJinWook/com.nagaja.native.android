@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+        <View
+                android:id="@+id/list_item_store_main_recommend_margin_view"
+                android:layout_width="16dp"
+                android:layout_height="1dp" />
+
+        <LinearLayout
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical" >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/list_item_store_recommend_menu_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    app:roundedCornerRadius="10dp"
+                    app:actualImageScaleType="fitXY"
+                    app:backgroundImage="@color/bg_color_f5f5f5"
+                    fresco:placeholderImage="@drawable/bg_default" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-5dp"
+                    android:background="@drawable/bg_recommend_menu">
+
+                <TextView
+                        android:id="@+id/list_item_store_recommend_menu_name_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:text="aasdkjlsd"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_12" />
+
+                <TextView
+                        android:id="@+id/list_item_store_recommend_menu_price_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:text="aasdkjlsd"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_12" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

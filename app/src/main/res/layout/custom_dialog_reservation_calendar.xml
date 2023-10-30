@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_boarder_half"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="@string/text_period_search"
+                android:textColor="@color/text_color_000000"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/custom_dialog_reservation_calendar_cancel_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:padding="5dp"
+                android:src="@drawable/icon_cancel" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.applikeysolutions.cosmocalendar.view.CalendarView
+                    android:id="@+id/custom_dialog_reservation_calendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    app:connectedDayIconPosition="top"
+                    app:currentDayIconRes="@drawable/round_shape_img"
+                    app:currentDaySelectedIconRes="@drawable/border_top_bottom"
+                    app:currentDayTextColor="@color/bg_color_0d4d97"
+                    app:firstDayOfTheWeek="sunday"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:orientation="horizontal"
+                    app:selectedDayBackgroundColor="@color/bg_color_0d4d97"
+                    app:selectedDayBackgroundEndColor="@color/bg_color_0d4d97"
+                    app:selectedDayBackgroundStartColor="@color/bg_color_0d4d97"
+                    app:selectedDayTextColor="#FFFFFF"
+                    app:selectionType="range"
+                    app:weekendDayTextColor="#ef4550" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color_ffffff" >
+
+        <TextView
+            android:id="@+id/custom_dialog_reservation_calendar_search_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:background="@drawable/bg_button_radius_blue"
+            android:text="@string/text_search"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/size_14"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

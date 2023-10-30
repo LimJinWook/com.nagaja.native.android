@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--<com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/list_item_event_view_pager_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:roundedCornerRadius="10dp"
+        app:actualImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/bg_default" />-->
+
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/list_item_board_event_view_pager_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:roundedCornerRadius="10dp"
+            app:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/bg_default"
+            app:failureImageScaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/list_item_board_event_view_pager_test_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY" />
+
+</LinearLayout>

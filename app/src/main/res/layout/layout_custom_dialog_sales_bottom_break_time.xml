@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_start"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_14"
+                android:textStyle="bold" />
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/layout_custom_dialog_sales_bottom_break_time_start_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_boarder"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/text_color_222222"
+                android:textColorHint="@color/text_color_222222"
+                android:textSize="@dimen/size_14"
+                app:spinner_arrow_drawable="@drawable/icon_spinner_arrow"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_item_array="@array/array_sales_time"
+                app:spinner_popup_max_height="120dp"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+                app:spinner_popup_elevation="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="4dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_finish"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_14"
+                android:textStyle="bold" />
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/layout_custom_dialog_sales_bottom_break_time_end_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_boarder"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/text_color_222222"
+                android:textColorHint="@color/text_color_222222"
+                android:textSize="@dimen/size_14"
+                app:spinner_arrow_drawable="@drawable/icon_spinner_arrow"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_item_array="@array/array_sales_time"
+                app:spinner_popup_max_height="120dp"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+                app:spinner_popup_elevation="14dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:background="@drawable/bg_boarder_black"
+            android:text="@string/text_add"
+            android:textColor="@color/text_color_222222"
+            android:textSize="@dimen/size_14"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_boarder" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/layout_custom_dialog_sales_bottom_break_time_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"/>
+
+    </LinearLayout>
+
+</LinearLayout>

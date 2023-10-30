@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical"
+    tools:context=".SelectLanguage.SelectLanguageActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/icon_nagaja" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        android:orientation="vertical">
+
+        <!-- Korean Text View -->
+        <LinearLayout
+            android:id="@+id/fragment_select_language_korean_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="47dp"
+            android:layout_marginEnd="47dp"
+            android:background="@drawable/bg_box"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/flag_korean" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/text_korean"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16" />
+
+        </LinearLayout>
+
+        <!-- English Text View -->
+        <LinearLayout
+            android:id="@+id/fragment_select_language_english_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="47dp"
+            android:background="@drawable/bg_box"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/flag_english" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/text_english"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16" />
+
+        </LinearLayout>
+
+        <!-- Filipino Text View -->
+        <LinearLayout
+            android:id="@+id/fragment_select_language_filipino_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="47dp"
+            android:background="@drawable/bg_box"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/flag_filipino" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:text="@string/text_filipino"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16" />
+
+        </LinearLayout>
+
+        <!-- Chinese Text View -->
+        <LinearLayout
+            android:id="@+id/fragment_select_language_chinese_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="47dp"
+            android:background="@drawable/bg_box"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/flag_chinese" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:text="@string/text_chinese"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16" />
+
+        </LinearLayout>
+
+        <!-- Japanese Text View -->
+        <LinearLayout
+            android:id="@+id/fragment_select_language_japanese_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="47dp"
+            android:background="@drawable/bg_box"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/flag_japanese" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:text="@string/text_japanese"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16" />
+
+        </LinearLayout>
+
+
+        <!--
+
+                &lt;!&ndash; English Text View &ndash;&gt;
+                <TextView
+                        android:id="@+id/fragment_select_language_english_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="47dp"
+                        android:layout_marginEnd="47dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_box"
+                        android:text="@string/text_english"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_16" />
+
+
+                &lt;!&ndash; Korean Text View &ndash;&gt;
+                <TextView
+                        android:id="@+id/fragment_select_language_korean_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="47dp"
+                        android:layout_marginEnd="47dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_box"
+                        android:text="@string/text_korean"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_16" />
+
+                &lt;!&ndash; Filipino Text View &ndash;&gt;
+                <TextView
+                        android:id="@+id/fragment_select_language_filipino_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="47dp"
+                        android:layout_marginEnd="47dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_box"
+                        android:text="@string/text_filipino"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_16" />
+
+                &lt;!&ndash; Chinese Text View &ndash;&gt;
+                <TextView
+                        android:id="@+id/fragment_select_language_chinese_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="47dp"
+                        android:layout_marginEnd="47dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_box"
+                        android:text="@string/text_chinese"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_16" />
+
+                &lt;!&ndash; Japanese Text View &ndash;&gt;
+                <TextView
+                        android:id="@+id/fragment_select_language_japanese_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="47dp"
+                        android:layout_marginEnd="47dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_box"
+                        android:text="@string/text_japanese"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_16" />
+        -->
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/layout_custom_dialog_sales_bottom_day_off_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_boarder"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/text_color_222222"
+            android:textColorHint="@color/text_color_222222"
+            android:textSize="@dimen/size_14"
+            app:spinner_arrow_drawable="@drawable/icon_spinner_arrow"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_item_array="@array/array_company_day_off"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="@drawable/bg_dialog_radius_popup_10dp"
+            app:spinner_popup_elevation="14dp" />
+
+    </LinearLayout>
+
+    <!-- Week Off Day View -->
+    <LinearLayout
+        android:id="@+id/layout_custom_dialog_sales_bottom_week_off_day_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/layout_custom_dialog_sales_bottom_day_off_sunday_view"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/layout_custom_dialog_sales_bottom_day_off_sunday_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_shot_sunday"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_custom_dialog_sales_bottom_day_off_monday_view"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="2dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/layout_custom_dialog_sales_bottom_day_off_monday_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_shot_monday"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_custom_dialog_sales_bottom_day_off_tuesday_view"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="2dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/layout_custom_dialog_sales_bottom_day_off_tuesday_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_shot_tuesday"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_custom_dialog_sales_bottom_day_off_wednesday_view"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="2dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/layout_custom_dialog_sales_bottom_day_off_wednesday_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_shot_wednesday"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_custom_dialog_sales_bottom_day_off_thursday_view"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="2dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/layout_custom_dialog_sales_bottom_day_off_thursday_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_shot_thursday"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_custom_dialog_sales_bottom_day_off_friday_view"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="2dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/layout_custom_dialog_sales_bottom_day_off_friday_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_shot_friday"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_custom_dialog_sales_bottom_day_off_saturday_view"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="2dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/layout_custom_dialog_sales_bottom_day_off_saturday_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_shot_saturday"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_16"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Double Week Off Day View -->
+    <LinearLayout
+        android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_sunday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_sunday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_sunday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_monday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_monday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_monday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_tuesday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_tuesday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_tuesday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_wednesday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_wednesday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_wednesday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_thursday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_thursday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_thursday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_friday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_friday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_friday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_saturday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_first_saturday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_saturday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_sunday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_sunday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_sunday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_monday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_monday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_monday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_tuesday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_tuesday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_tuesday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_wednesday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_wednesday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_wednesday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_thursday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_thursday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_thursday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_friday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_friday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_friday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_saturday_view"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/layout_custom_dialog_sales_bottom_double_week_off_day_second_saturday_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_shot_saturday"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Month Off Day View -->
+    <LinearLayout
+        android:id="@+id/layout_custom_dialog_sales_bottom_month_off_day_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/layout_custom_dialog_sales_bottom_month_off_day_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+
+    </LinearLayout>
+    
+</LinearLayout>

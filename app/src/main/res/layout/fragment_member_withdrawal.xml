@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color_ffffff"
+        android:orientation="vertical"
+        tools:context=".SettingProfile.SettingProfileActivity" >
+
+    <include
+            layout="@layout/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:id="@+id/fragment_member_withdrawal_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/text_title_member_withdrawal"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_24" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/text_message_member_withdrawal"
+                android:textColor="@color/text_color_9f9f9f"
+                android:textSize="@dimen/size_16" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_vertical">
+
+            <ImageView
+                    android:id="@+id/fragment_member_withdrawal_check_1_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_check_circle_outline_24"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/text_withdrawal_1"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="13dp"
+                android:layout_gravity="center_vertical">
+
+            <ImageView
+                    android:id="@+id/fragment_member_withdrawal_check_2_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_check_circle_outline_24"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/text_withdrawal_2"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="13dp"
+                android:layout_gravity="center_vertical">
+
+            <ImageView
+                    android:id="@+id/fragment_member_withdrawal_check_3_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_check_circle_outline_24"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/text_withdrawal_3"
+                    android:textColor="@color/text_color_222222"
+                    android:textSize="@dimen/size_14"/>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/fragment_member_withdrawal_identity_verification_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:background="@drawable/bg_button_radius_blue"
+                android:text="@string/text_identity_verification"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="@dimen/size_16"/>
+
+    </LinearLayout>
+
+    <include
+            android:id="@+id/fragment_member_withdrawal_success_view"
+            layout="@layout/fragment_success_member_withdrawal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+</LinearLayout>

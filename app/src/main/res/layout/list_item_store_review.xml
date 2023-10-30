@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/fragment_list_item_store_review_profile_image_view"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                app:actualImageScaleType="fitXY"
+                app:roundAsCircle="true" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="9dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fragment_list_item_store_review_name_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_12"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fragment_list_item_store_review_id_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/text_color_222222"
+                        android:textSize="@dimen/size_12"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RatingBar
+                            android:id="@+id/fragment_list_item_store_review_ring_star_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:progressTint="@color/bg_color_ffcc11"
+                            android:rating="0"
+                            android:stepSize="1"
+                            style="?android:attr/ratingBarStyleSmall"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/fragment_list_item_store_review_date_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/text_color_bebebe"
+                        android:textSize="@dimen/size_12" />
+
+                    <!--<ImageView
+                        android:id="@+id/fragment_list_item_store_review_star_rating_1_image_view"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_baseline_star_24_disable" />
+
+                    <ImageView
+                        android:id="@+id/fragment_list_item_store_review_star_rating_2_image_view"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_baseline_star_24_disable" />
+
+                    <ImageView
+                        android:id="@+id/fragment_list_item_store_review_star_rating_3_image_view"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_baseline_star_24_disable" />
+
+                    <ImageView
+                        android:id="@+id/fragment_list_item_store_review_star_rating_4_image_view"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_baseline_star_24_disable" />
+
+                    <ImageView
+                        android:id="@+id/fragment_list_item_store_review_star_rating_5_image_view"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_baseline_star_24_disable" />-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_list_item_store_review_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="1"
+            android:textColor="@color/text_color_626262"
+            android:textSize="@dimen/size_13"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/fragment_list_item_store_review_comment_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/text_color_626262"
+            android:textSize="@dimen/size_13" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_list_item_store_review_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:overScrollMode="never" />
+
+        <LinearLayout
+            android:id="@+id/fragment_list_item_store_review_not_my_write_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/fragment_list_item_store_review_recommend_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/fragment_list_item_store_review_recommend_icon_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_review_good" />
+
+                <TextView
+                    android:id="@+id/fragment_list_item_store_review_recommend_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="@string/text_recommendation"
+                    android:textColor="@color/text_color_bebebe"
+                    android:textSize="@dimen/size_12" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/fragment_list_item_store_review_report_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/fragment_list_item_store_review_report_icon_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_note_report" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="@string/text_note_report"
+                    android:textColor="@color/text_color_bebebe"
+                    android:textSize="@dimen/size_12" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_list_item_store_review_my_write_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/fragment_list_item_store_review_modify_text_view"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_boarder_black"
+                android:gravity="center"
+                android:text="@string/text_modify"
+                android:textColor="@color/text_color_222222"
+                android:textSize="@dimen/size_14"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/fragment_list_item_store_review_delete_text_view"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_button_radius_blue"
+                android:gravity="center"
+                android:text="@string/text_delete"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="@dimen/size_14"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/bg_color_e1e1e1" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="300dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_dialog_radius_popup_10dp"
+            android:orientation="vertical" >
+
+        <TextView
+                android:id="@+id/custom_dialog_bottom_title_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="@string/text_select_image"
+                android:textColor="@color/text_color_9f9f9f"
+                android:textSize="@dimen/size_12" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color_e1e1e1" />
+
+        <TextView
+                android:id="@+id/custom_dialog_bottom_camera_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="@string/text_camera"
+                android:textColor="@color/bg_color_2273eb"
+                android:textSize="@dimen/size_18" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color_e1e1e1" />
+
+        <TextView
+                android:id="@+id/custom_dialog_bottom_gallery_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="@string/text_gallery"
+                android:textColor="@color/bg_color_2273eb"
+                android:textSize="@dimen/size_18" />
+
+        <LinearLayout
+            android:id="@+id/custom_dialog_bottom_select_file_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color_e1e1e1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="@string/text_select_pdf_file"
+                android:textColor="@color/bg_color_2273eb"
+                android:textSize="@dimen/size_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/custom_dialog_bottom_delete_profile_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_color_e1e1e1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:text="@string/text_delete_profile_image"
+                android:textColor="@color/text_color_ff4755"
+                android:textSize="@dimen/size_18"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_dialog_radius_popup_10dp"
+            android:orientation="vertical" >
+
+        <TextView
+                android:id="@+id/custom_dialog_bottom_cancel_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:gravity="center"
+                android:text="@string/text_cancel"
+                android:textColor="@color/text_color_ff4755"
+                android:textSize="@dimen/size_18" />
+
+    </LinearLayout>
+
+</LinearLayout>
